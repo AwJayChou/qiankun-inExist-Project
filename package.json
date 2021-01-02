@@ -1,0 +1,33 @@
+{
+  "name": "micro-demo",
+  "version": "1.0.0",
+  "description": "An completed implementation of Micro Frontends",
+  "keywords": [
+    "micro frontend",
+    "microfrontend",
+    "micro frontends",
+    "micro-frontend",
+    "micro-frontends",
+    "microservice"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "proxy:install": "npm-run-all install:*",
+    "proxy:start": "npm-run-all --parallel start:*",
+    "install:micro-child-react": "cd micro-child-react && yarn",
+    "start:micro-child-react": "cd micro-child-react && yarn start",
+    "install:micro-child-vue": "cd micro-child-vue && npm i",
+    "start:micro-child-vue": "cd micro-child-vue && npm run serve",
+    "install:micro-project-base": "cd micro-project-base && npm i",
+    "start:micro-project-base": "cd micro-project-base && npm run serve"
+  },
+  "bugs": {
+    "url": "https://github.com/AwJayChou/qiankun-useInProject/issues"
+  },
+  "homepage": "https://github.com/AwJayChou/qiankun-useInProject#readme",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
