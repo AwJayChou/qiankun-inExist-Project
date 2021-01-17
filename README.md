@@ -10,8 +10,8 @@ npm run proxy:start
 
 
 # 文档
-
+https://www.yuque.com/jaychou/dg5wu7/wrn1vn
 
 效果
 
-  ![image](https://github.com/AwJayChou/qiankun-useInProject/blob/main/static/images/main.png)
+  ![image](https://github.com/AwJayChou/qiankun-inExist-Project/blob/main/static/images/main.png)
