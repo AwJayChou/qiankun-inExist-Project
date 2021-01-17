@@ -3,6 +3,7 @@
 
 # 开始
 
+npm i
 npm run proxy:install
 npm run proxy:start
 
