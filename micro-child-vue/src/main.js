@@ -3,6 +3,7 @@ import Vue from 'vue'
 import VueRouter from "vue-router";
 import App from './App.vue'
 import routes from "./routes";
+import actions from './actions'
 Vue.use(VueRouter);
 Vue.config.productionTip = false
 
@@ -13,7 +14,13 @@ let router = null;
  * 渲染函数
  * 两种情况：主应用生命周期钩子中运行 / 微应用单独启动时运行
  */
-function render() {
+function render(props) {
+  console.log('render props ==>', props);
+  actions.setActions(props)
+  // props.onGlobalStateChange((state, prev) => {
+  //   // state: 变更后的状态; prev 变更前的状态
+  //   console.log('onGlobalStateChange ===>', state, prev);
+  // })
   // 在 render 中创建 VueRouter，可以保证在卸载微应用时，移除 location 事件监听，防止事件污染
   router = new VueRouter({
     // 运行在主应用中时，添加路由命名空间 /vue

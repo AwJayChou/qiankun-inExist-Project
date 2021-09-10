@@ -28,15 +28,31 @@
       <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
+
     </ul>
+    <div>
+      <button @click="handleLogin">登陆</button>
+    </div>
   </div>
 </template>
 
 <script>
+import action from '@/micro/action.js'
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  mounted() {
+    action.onGlobalStateChange(state => {
+      console.log('state ==>', state)
+    })
+  },
+  methods: {
+    handleLogin() {
+      console.log('handleLogin', action)
+      action.setGlobalState({ token: Math.random() * 10 })
+    }
   }
 }
 </script>
